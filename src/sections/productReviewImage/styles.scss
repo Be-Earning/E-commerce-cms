@@ -1,0 +1,255 @@
+.faq-product {
+  .slick-slider {
+    margin: 0 auto;
+    min-width: 1487.2px;
+
+    .slick-list {
+      margin-right: 0 -20px;
+    }
+
+    .slick-slide {
+      padding-right: 20px;
+    }
+
+    .slick-dots {
+      display: flex !important;
+      justify-content: center;
+      position: absolute;
+      bottom: -50px;
+
+      li {
+        button {
+          padding: 0;
+
+          &::before {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-review {
+  .slick-slider {
+    margin: 0 auto;
+    min-width: 1370px;
+
+    .slick-list {
+      margin-right: 0 -50px;
+      z-index: 200;
+    }
+
+    .slick-slide {
+      padding-right: 50px;
+    }
+  }
+}
+
+.model-product {
+  .slick-slide {
+    margin-top: 50px;
+    transform: scale(0.8);
+    transform-origin: top;
+    transition: all 0.5s ease-in-out;
+
+    & + div {
+      height: 340px;
+    }
+  }
+
+  .slick-current {
+    transform: scale(1);
+  }
+}
+
+.discover-section {
+  .slide-vertical {
+    .slick-list {
+      .slick-slide {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .slide-horizontal {
+    .slide-large {
+      height: 580px;
+      .slick-list {
+        .slick-slide {
+          z-index: 100;
+          transition: all 0.2s ease-in-out;
+          .product-card {
+            transition: all 0.2s ease-in-out;
+          }
+        }
+
+        .slick-active {
+          & > div:first-child {
+            margin-top: 180px;
+            margin-left: -40px;
+          }
+        }
+
+        .slick-current {
+          & > div:first-child {
+            margin-left: -105px;
+            margin-top: 0px;
+          }
+          .product-card {
+            width: 572px;
+            height: 590px;
+          }
+
+          & + .slick-active {
+            & > div:first-child {
+              margin-left: 100px;
+            }
+          }
+        }
+      }
+    }
+
+    .list-lager-short {
+      .product-card {
+        margin-top: 190px;
+      }
+
+      .img-lagre {
+        margin-top: 0px;
+        width: 572px !important;
+        height: 590px !important;
+      }
+    }
+  }
+}
+
+.vip-dialog-image {
+  background-image: url('../../assets/background/bg-vip-dialog.png');
+}
+
+@media only screen and (max-width: 640px) {
+  .faq-product {
+    .slick-slider {
+      margin: 0 auto;
+      min-width: 100%;
+    }
+  }
+
+  .list-review {
+    .slick-slider {
+      min-width: 380px;
+
+      .slick-list {
+        margin-right: 0 -20px;
+        z-index: 200;
+      }
+
+      .slick-slide {
+        padding-right: 20px;
+      }
+
+      .slick-dots {
+        top: -40px;
+      }
+    }
+  }
+
+  .discover-section {
+    .slide-vertical {
+      .slick-list {
+        .slick-slide {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .slide-horizontal {
+      .slide-small {
+        .slick-slider {
+          .slick-list {
+            height: 797px !important;
+          }
+        }
+
+        .slick-slide {
+          transform: scale(0.8);
+          margin-left: -34px;
+          transition: all 0.3s ease;
+        }
+
+        .slick-slide {
+          .bg-show {
+            display: none;
+          }
+        }
+
+        .slick-current {
+          & + .slick-active {
+            transform: scale(1);
+            margin-left: 0px;
+
+            & + .slick-slide {
+              margin-top: 30px;
+            }
+
+            .bg-hide {
+              display: none;
+            }
+
+            .bg-show {
+              display: block;
+            }
+
+            .icon-button {
+              bottom: -15%;
+              right: 0.5px;
+              width: 35px !important;
+              height: 35px !important;
+            }
+
+            .content {
+              padding-left: 8px;
+              bottom: -11%;
+
+              & > div:first-child {
+                margin-bottom: 8px;
+              }
+              & > div:last-child {
+                margin-top: 8px;
+              }
+              h6 {
+                font-size: 18px;
+              }
+
+              .left-item {
+                font-size: 14px;
+              }
+              .price {
+                font-size: 16px;
+
+                span {
+                  font-size: 20px;
+                }
+
+                .original-price {
+                  font-size: 16px;
+                }
+              }
+
+              .vip-price {
+                p {
+                  font-size: 16px;
+                }
+
+                span {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

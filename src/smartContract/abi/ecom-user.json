@@ -1,0 +1,1497 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "paymentType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalPayment",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "buyer",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct PaymentHistory",
+        "name": "_payment",
+        "type": "tuple"
+      }
+    ],
+    "name": "addUserPayment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "adminDeleteUser",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "deleteAdmin",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "deleteUser",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "fullName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "uint8",
+            "name": "gender",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "dateOfBirth",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "phoneNumber",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "parent",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct registerParams",
+        "name": "params",
+        "type": "tuple"
+      }
+    ],
+    "name": "register",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "stateMutability": "payable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "phoneNumber",
+        "type": "string"
+      }
+    ],
+    "name": "eRegisterRetailer",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_username",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_phoneNumber",
+        "type": "string"
+      }
+    ],
+    "name": "registerRetailer",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_productID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isFlashSale",
+        "type": "bool"
+      },
+      {
+        "internalType": "address",
+        "name": "retailer",
+        "type": "address"
+      }
+    ],
+    "name": "sendCreateProductNotification",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_orderID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_buyer",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_retailers",
+        "type": "address[]"
+      }
+    ],
+    "name": "sendExecuteOrderNotification",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint8",
+        "name": "dataStruct",
+        "type": "uint8"
+      },
+      {
+        "internalType": "string",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "body",
+        "type": "string"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_to",
+        "type": "address[]"
+      },
+      {
+        "internalType": "string",
+        "name": "notificationType",
+        "type": "string"
+      }
+    ],
+    "name": "sendMultipleNotification",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint8",
+        "name": "dataStruct",
+        "type": "uint8"
+      },
+      {
+        "internalType": "string",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "body",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "notificationType",
+        "type": "string"
+      }
+    ],
+    "name": "sendNotification",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_orderID",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      }
+    ],
+    "name": "sendNotificationStorageOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "setAdmin",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_email",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_orderUpdate",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_promotion",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_createProduct",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_customerOrderUpdate",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_commentUpdate",
+        "type": "bool"
+      }
+    ],
+    "name": "setAdminNotificationSetting",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_email",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_orderUpdate",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_promotion",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_createProduct",
+        "type": "bool"
+      }
+    ],
+    "name": "setCustomerNotificationSetting",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_ecomInfo",
+        "type": "address"
+      }
+    ],
+    "name": "SetEcomInfo",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_ecomOrder",
+        "type": "address"
+      }
+    ],
+    "name": "SetEcomOrder",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_ecomProduct",
+        "type": "address"
+      }
+    ],
+    "name": "SetEcomUser",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_noti",
+        "type": "address"
+      }
+    ],
+    "name": "SetNotification",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "setRetailer",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_email",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_orderUpdate",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_promotion",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_createProduct",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_customerOrderUpdate",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "_commentUpdate",
+        "type": "bool"
+      }
+    ],
+    "name": "setRetailerNotificationSetting",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_po5",
+        "type": "address"
+      }
+    ],
+    "name": "SetTreeCom",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "image",
+        "type": "string"
+      }
+    ],
+    "name": "updateUserImage",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "fullName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "uint8",
+            "name": "gender",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "dateOfBirth",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "phoneNumber",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "parent",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct registerParams",
+        "name": "params",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "state",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "postalCode",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "detailAddress",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct AddressInfo[]",
+        "name": "addressesInfo",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "updateUserInfo",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "admins",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "EcomInfo",
+    "outputs": [
+      {
+        "internalType": "contract IEcomInfo",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "EcomOrder",
+    "outputs": [
+      {
+        "internalType": "contract IEcomOrder",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "EcomUser",
+    "outputs": [
+      {
+        "internalType": "contract IEcomUser",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "code",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "message",
+        "type": "string"
+      }
+    ],
+    "name": "getErrorMessage",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "getNotificationSetting",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "NotificationEmail",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "OrderUpdate",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "PromotionalProgram",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "CreateProduct",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "CustomerOrderUpdate",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "CommentUpdate",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct NotificationSetting",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getUser",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "fullName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "uint8",
+            "name": "gender",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "dateOfBirth",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "phoneNumber",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "image",
+            "type": "string"
+          },
+          {
+            "internalType": "enum ROLE",
+            "name": "role",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "createdAt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "parent",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct UserInfo",
+        "name": "info",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "state",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "postalCode",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "detailAddress",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct AddressInfo[]",
+        "name": "addresses",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "getUserInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "fullName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "uint8",
+            "name": "gender",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "dateOfBirth",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "phoneNumber",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "image",
+            "type": "string"
+          },
+          {
+            "internalType": "enum ROLE",
+            "name": "role",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "createdAt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "parent",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct UserInfo",
+        "name": "info",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "country",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "city",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "state",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "postalCode",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "detailAddress",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct AddressInfo[]",
+        "name": "addresses",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "getUserParent",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getUserPaymentHistory",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "paymentType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalPayment",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "buyer",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct PaymentHistory[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "getUserPaymentHistoryInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "paymentType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalPayment",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "buyer",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct PaymentHistory[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "getUserRole",
+    "outputs": [
+      {
+        "internalType": "enum ROLE",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getUsersInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "fullName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "uint8",
+            "name": "gender",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "dateOfBirth",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "phoneNumber",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "image",
+            "type": "string"
+          },
+          {
+            "internalType": "enum ROLE",
+            "name": "role",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256",
+            "name": "createdAt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "parent",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct UserInfo[]",
+        "name": "infos",
+        "type": "tuple[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "purchases",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "IsRetailer",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "mAdmin",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "mUserAddressInfo",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "city",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "state",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "postalCode",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "detailAddress",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "mUserInfo",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "fullName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "internalType": "uint8",
+        "name": "gender",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "dateOfBirth",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "phoneNumber",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "image",
+        "type": "string"
+      },
+      {
+        "internalType": "enum ROLE",
+        "name": "role",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "createdAt",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "parent",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "mUserPaymentHistory",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "paymentType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "totalPayment",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "Notification",
+    "outputs": [
+      {
+        "internalType": "contract INoti",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "NOTIFIER",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "TreeCom",
+    "outputs": [
+      {
+        "internalType": "contract ITreeCom",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "userList",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "userNotificationSettings",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "NotificationEmail",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "OrderUpdate",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "PromotionalProgram",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "CreateProduct",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "CustomerOrderUpdate",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "CommentUpdate",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

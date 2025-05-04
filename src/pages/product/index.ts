@@ -1,0 +1,5 @@
+export { default as CreateProduct } from './CreateProduct'
+export { default as ListProducts } from './ListProducts'
+export { default as ProductReview } from './ProductReview'
+export { default as ProductDetail } from './ProductDetail'
+export { default as EditProductImagePage } from './EditProductImagePage'

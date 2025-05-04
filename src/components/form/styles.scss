@@ -1,0 +1,51 @@
+.list-wallet {
+  .swiper {
+    .swiper-wrapper {
+      margin-left: 32.3px;
+      .swiper-slide {
+        transition: all 0.3s ease-in-out;
+        opacity: 0 !important;
+        .card {
+          transition: all 0.3s ease-in-out;
+          opacity: 0 !important;
+        }
+      }
+
+      .swiper-slide-active,
+      .swiper-slide-prev,
+      .swiper-slide-next {
+        opacity: 1 !important;
+        .card {
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .list-wallet {
+    .swiper {
+      .swiper-wrapper {
+        margin-left: 20px;
+        .swiper-slide {
+          transition: all 0.3s ease-in-out;
+          opacity: 0 !important;
+          .card {
+            transition: all 0.3s ease-in-out;
+            opacity: 0 !important;
+          }
+        }
+
+        .swiper-slide-active,
+        .swiper-slide-prev,
+        .swiper-slide-next {
+          opacity: 1 !important;
+          .card {
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+  }
+}
